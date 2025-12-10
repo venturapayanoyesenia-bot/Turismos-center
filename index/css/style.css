@@ -1,0 +1,263 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial;
+    background: #f4f7fa;
+}
+
+header {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand img {
+    width: 70px;
+    border-radius: 12px;
+}
+
+.logo-text {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.nav-desktop {
+    display: none;
+}
+
+.nav-desktop .primary a {
+    text-decoration: none;
+    margin: 0 15px;
+    color: #003344;
+    font-weight: 700;
+}
+
+
+.hamburger {
+    font-size: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    opacity: 0;
+    pointer-events: none;
+    transition: .2s;
+}
+
+.overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    background: #fff;
+    padding: 25px;
+    box-shadow: -10px 0 25px rgba(0,0,0,0.2);
+    transition: .3s;
+    z-index: 200;
+}
+
+.sidebar.show {
+    right: 0;
+}
+
+.sidebar nav {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    font-size: 18px;
+    padding: 12px;
+    color: #003344;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.sidebar a:hover {
+    background: #e8f7ff;
+}
+
+.close {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media (min-width: 900px) {
+    .nav-desktop {
+        display: block;
+    }
+
+    .hamburger,
+    .sidebar,
+    .overlay {
+        display: none;
+    }
+}
+
+
+.hero {
+    width: 100%;
+    height: 380px;
+    border-radius: 18px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #003344;
+    font-weight: 800;
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    padding: 0 10px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    transition: .2s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin: 15px;
+    text-align: center;
+}
+
+.card p {
+    font-size: 16px;
+    margin: 0 15px 18px;
+    text-align: center;
+}
+
+
+.separador {
+    width: 100%;
+    height: 50px;
+}
+
+
+.horario {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.horario h2 {
+    font-size: 32px;
+    color: #003344;
+}
+
+.horario-box {
+    margin-top: 20px;
+    padding: 20px;
+    background: #e8f7ff;
+    border-radius: 12px;
+}
+
+.cerrado {
+    color: red;
+    font-weight: bold;
+}
+
+
+footer {
+    background: white;
+    color: black;
+    padding: 40px 0;
+    margin-top: 60px;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo img {
+    width: 70px;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    font-size: 17px;
+}
+
+footer h4 {
+    font-size: 22px;
+    font-weight: bold;
+}
